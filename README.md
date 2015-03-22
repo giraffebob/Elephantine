@@ -48,6 +48,8 @@ Recast does this in one go! Thus:
 
 tidyData <- recast(dataSelected,subjectNumber + Activity ~ ...,fun.aggregate=mean,id.var=1:2)
 
+It's a split-apply-combine. Splits the data into 180 groups by subject-activity combination; applies the mean to the other 66 variables within each group; then combines the groups back into one dataframe.
+
 
 ## Final Details
 
@@ -62,3 +64,13 @@ Use read.table("tidyData.txt",header=TRUE) to read the data back in.
 By default, subjectNumber will be an integer, so you should turn it back to a factor(if desired)
 
 By default, Activity will be a factor.
+
+# Why do I claim my data is tidy?
+
+Each of the 180 rows (header row excepted) contains the data for a different subject-activity combination.
+
+The first two columns of any row are the unique subject-activity combination for that observation.
+
+Column 1 contains all subject identifiers; column 2 all activity names.
+
+Columns 3:68 each contain one variable. Each entry in a column is the result of applying the same processing to the same kind of measurement. 
