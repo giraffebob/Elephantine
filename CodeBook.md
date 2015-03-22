@@ -11,40 +11,60 @@ The experiment in which the data was collected is described in the Appendix belo
 ## Variables 1:2
 
 1 "subjectNumber"
+
 This is an integer from 1-30 indicating one of the 30 subjects (volunteers aged (19-48)) - really just a label.
+
 2 "Activity"
+
 This is one of the activities: "Walking", "WalkingUpstairs","WalkingDownstairs","Laying","Sitting","Standing"
+
 ## Variables 3-68
+
 These variables are data that refer to the subject and activity identifying the row. They are all means of many experiments involving the subject-activity pair. Thus, they are means of means or means of standard deviations.
 All variables have been normalised against their largest values in the dataset, such that they lie in the range [-1,1]. It follows that all values are dimensionless i.e. they do not have physical units.
 
 The variable names are structured in lowerCamelCase and follow a consistent pattern on decomposition by humps.
 
 First Part:
+
 "t" Time domain data - no Fourier transform has been applied.
+
 "f" Frequency domain data - result of a fast Fourier transform.
 
 Second Part:
+
 "BodyAcc" Body component of accelerometer measurement.
+
 "GravityAcc" Gravity component of accelerometer measurement.
+
 "Gyroscope" Gyroscope measurement.
 
 Third Part [Optional]:
+
 "Jerk" indicates that the data has been numerically differentiated to estimate the jerk.
+
 If this is absent, the original reading has been used - so it's an acceleration (accelerometer) or angular velocity (gyroscope).
 
 Fourth Part:
+
 Acceleration, angular velocity and jerk are all vectors, so the components and magnitude are reported.
+
 "Xcomp" X-component
+
 "Ycomp" Y-component
+
 "Zcomp" Z-component
+
 "Mag" Magnitude
 
 Fifth Part:
+
 "Mean" This is the mean of all readings for this experiment.
+
 "Std" This is the standard deviation of all readings for this experiment.
 
 Example:
+
 "tBodyAccXcompMean" 
 Accelerometer reading, decomposed into Body and Gravity parts using a filter - this is the body part.
 It is the X-component of the vector.
@@ -56,70 +76,135 @@ Finally, a mean was taken over all experiments (rows of the bigger tidy data set
 
 ## Variable names 3-68
 3 "tBodyAccXcompMean"
+
 4 "tBodyAccYcompMean"
+
 5 "tBodyAccZcompMean"
+
 6 "tBodyAccXcompStd"
+
 7 "tBodyAccYcompStd"
+
 8 "tBodyAccZcompStd"
+
 9 "tGravityAccXcompMean"
+
 10 "tGravityAccYcompMean"
+
 11 "tGravityAccZcompMean"
+
 12 "tGravityAccXcompStd"
+
 13 "tGravityAccYcompStd"
+
 14 "tGravityAccZcompStd"
+
 15 "tBodyAccJerkXcompMean"
+
 16 "tBodyAccJerkYcompMean"
+
 17 "tBodyAccJerkZcompMean"
+
 18 "tBodyAccJerkXcompStd"
+
 19 "tBodyAccJerkYcompStd"
+
 20 "tBodyAccJerkZcompStd"
+
 21 "tGyroscopeXcompMean"
+
 22 "tGyroscopeYcompMean"
+
 23 "tGyroscopeZcompMean"
+
 24 "tGyroscopeXcompStd"
+
 25 "tGyroscopeYcompStd"
+
 26 "tGyroscopeZcompStd"
+
 27 "tGyroscopeJerkXcompMean"
+
 28 "tGyroscopeJerkYcompMean"
+
 29 "tGyroscopeJerkZcompMean"
+
 30 "tGyroscopeJerkXcompStd"
+
 31 "tGyroscopeJerkYcompStd"
+
 32 "tGyroscopeJerkZcompStd"
+
 33 "tBodyAccMagMean"
+
 34 "tBodyAccMagStd"
+
 35 "tGravityAccMagMean"
+
 36 "tGravityAccMagStd"
+
 37 "tBodyAccJerkMagMean"
+
 38 "tBodyAccJerkMagStd"
+
 39 "tGyroscopeMagMean"
+
 40 "tGyroscopeMagStd"
+
 41 "tGyroscopeJerkMagMean"
+
 42 "tGyroscopeJerkMagStd"
+
 43 "fBodyAccXcompMean"
+
 44 "fBodyAccYcompMean"
+
 45 "fBodyAccZcompMean"
+
 46 "fBodyAccXcompStd"
+
 47 "fBodyAccYcompStd"
+
 48 "fBodyAccZcompStd"
+
 49 "fBodyAccJerkXcompMean"
+
 50 "fBodyAccJerkYcompMean"
+
 51 "fBodyAccJerkZcompMean"
+
 52 "fBodyAccJerkXcompStd"
+
 53 "fBodyAccJerkYcompStd"
+
 54 "fBodyAccJerkZcompStd"
+
 55 "fGyroscopeXcompMean"
+
 56 "fGyroscopeYcompMean"
+
 57 "fGyroscopeZcompMean"
+
 58 "fGyroscopeXcompStd"
+
 59 "fGyroscopeYcompStd"
+
 60 "fGyroscopeZcompStd"
+
 61 "fBodyAccMagMean"
+
 62 "fBodyAccMagStd"
+
 63 "fBodyAccJerkMagMean"
+
 64 "fBodyAccJerkMagStd"
+
 65 "fGyroscopeMagMean"
+
 66 "fGyroscopeMagStd"
+
 67 "fGyroscopeJerkMagMean"
+
 68 "fGyroscopeJerkMagStd"
 
 ## Appendix: Information on original data source.
